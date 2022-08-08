@@ -68,6 +68,12 @@
             android:id="@+id/tb_main_table"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:tabIndicatorColor="@color/white"
+            app:tabTextColor="@color/white"
+            app:tabGravity="start"
+            android:clipToPadding="false"
+            app:tabTextAppearance="@style/tab_text"
+            app:tabIndicatorFullWidth="false"
             android:background="@drawable/tab_gradient"/>
 
     </com.google.android.material.appbar.AppBarLayout>
