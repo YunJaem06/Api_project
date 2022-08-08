@@ -20,7 +20,7 @@ class SplashActivity : AppCompatActivity() {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        ObjectAnimator.ofFloat(binding.ivSplash, View.TRANSLATION_X, -700f).apply {
+        ObjectAnimator.ofFloat(binding.ivSplash, View.TRANSLATION_X, -540f).apply {
             duration = 1500L
             repeatCount = ObjectAnimator.INFINITE
             repeatMode = ObjectAnimator.REVERSE
@@ -30,6 +30,7 @@ class SplashActivity : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            finish()
         }, 1500)
     }
 }
