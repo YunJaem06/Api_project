@@ -37,9 +37,9 @@
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:src="@drawable/icon_menu"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_cgv_logo"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/iv_cgv_logo"
-                    app:layout_constraintBottom_toBottomOf="@id/iv_cgv_logo"/>
+                    app:layout_constraintTop_toTopOf="@id/iv_cgv_logo" />
 
                 <ImageView
                     android:id="@+id/iv_main_popcorn"
@@ -47,18 +47,18 @@
                     android:layout_height="25dp"
                     android:layout_marginEnd="10dp"
                     android:src="@drawable/icon_popcorn"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_cgv_logo"
                     app:layout_constraintEnd_toStartOf="@id/iv_main_menu"
-                    app:layout_constraintTop_toTopOf="@id/iv_cgv_logo"
-                    app:layout_constraintBottom_toBottomOf="@id/iv_cgv_logo"/>
+                    app:layout_constraintTop_toTopOf="@id/iv_cgv_logo" />
 
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="match_parent"
-                    android:src="@drawable/icon_cgv_ticket"
                     android:scaleType="centerCrop"
+                    android:src="@drawable/icon_cgv_ticket"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_cgv_logo"
                     app:layout_constraintEnd_toStartOf="@id/iv_main_popcorn"
-                    app:layout_constraintTop_toTopOf="@id/iv_cgv_logo"
-                    app:layout_constraintBottom_toBottomOf="@id/iv_cgv_logo"/>
+                    app:layout_constraintTop_toTopOf="@id/iv_cgv_logo" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -68,13 +68,13 @@
             android:id="@+id/tb_main_table"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:tabIndicatorColor="@color/white"
-            app:tabTextColor="@color/white"
-            app:tabGravity="start"
+            android:background="@drawable/tab_gradient"
             android:clipToPadding="false"
-            app:tabTextAppearance="@style/tab_text"
+            app:tabGravity="start"
+            app:tabIndicatorColor="@color/white"
             app:tabIndicatorFullWidth="false"
-            android:background="@drawable/tab_gradient"/>
+            app:tabTextAppearance="@style/tab_text"
+            app:tabTextColor="@color/white" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
