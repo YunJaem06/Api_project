@@ -108,6 +108,15 @@
             app:layout_constraintTop_toBottomOf="@+id/tb_home_movie_chart"
             tools:listitem="@layout/item_home_movie_chart" />
 
+        <View
+            android:id="@+id/view_home_line"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#f0f0f0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_movie_chart"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.core.widget.NestedScrollView>

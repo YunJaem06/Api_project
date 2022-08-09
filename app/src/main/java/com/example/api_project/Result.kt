@@ -15,4 +15,15 @@ data class Result(
     val video: Boolean,
     val vote_average: Double,
     val vote_count: Int
-)
+) {
+    fun getPopular(): String {
+        val formatter = popularity.toInt()
+        var million = formatter % 100000000
+        var thousand = formatter / 100000000
+        return "${million}억 ${thousand}만명"
+    }
+    fun getPosterPercent(): String {
+        val percent = vote_average.toInt()
+        return "${percent}%"
+    }
+}
