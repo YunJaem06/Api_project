@@ -2,6 +2,9 @@ package com.example.api_project
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import com.example.api_project.databinding.ActivityMainBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -23,5 +26,10 @@ class MainActivity : AppCompatActivity() {
             tab, position ->
             tab.text = information[position]
         }.attach()
+
+        binding.ivMainMenu.setOnClickListener {
+            binding.drawerLayout.openDrawer(GravityCompat.START)
+        }
+
     }
 }
