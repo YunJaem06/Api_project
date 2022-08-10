@@ -1,5 +1,6 @@
 package com.example.api_project
 
+import com.example.api_project.data.MovieJson
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

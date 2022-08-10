@@ -5,9 +5,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.api_project.data.Movies
 import com.example.api_project.databinding.ItemHomeMovieChartBinding
 
-class MovieRvAdapter(val context: Context, val movieList : ArrayList<Movies>) : RecyclerView.Adapter<MovieRvAdapter.MovieRvViewHolder>() {
+class MovieRvAdapter(val context: Context, private val movieList : ArrayList<Movies>) : RecyclerView.Adapter<MovieRvAdapter.MovieRvViewHolder>() {
 
    var itemList : ArrayList<Movies> = movieList
 
@@ -28,7 +29,7 @@ class MovieRvAdapter(val context: Context, val movieList : ArrayList<Movies>) : 
     inner class MovieRvViewHolder(private val binding: ItemHomeMovieChartBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Movies){
             binding.tvPosterName.text = itemList[adapterPosition].name
-            val url = itemList[adapterPosition].img
+            val url = "https://image.tmdb.org/t/p/w500" + itemList[adapterPosition].img
             Glide.with(context)
                 .load(url)
                 .into(binding.ivMoviePoster)

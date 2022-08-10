@@ -1,12 +1,13 @@
 package com.example.api_project.fragment
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.api_project.*
+import com.example.api_project.data.MovieJson
+import com.example.api_project.data.Movies
 import com.example.api_project.databinding.FragmentMainBinding
 import retrofit2.Call
 import retrofit2.Callback
@@ -41,8 +42,8 @@ class MainFragment : Fragment() {
 
         val movieApi = RetrofitClient.mainRetrofit.create(RetrofitMovieAPI::class.java)
 
-        movieApi.getNowPlaying(api_key, language, page, region).enqueue(object :
-            Callback<MovieJson> {
+        movieApi.getNowPlaying(api_key, language, page, region).enqueue(object : Callback<MovieJson> {
+
             override fun onResponse(call: Call<MovieJson>, response: Response<MovieJson>) {
                 if (response.isSuccessful) {
                     val result = response.body() as MovieJson
@@ -60,9 +61,7 @@ class MainFragment : Fragment() {
                     adapter.notifyDataSetChanged()
                 }
             }
-
             override fun onFailure(call: Call<MovieJson>, t: Throwable) {
-                Log.d("test", t.message ?: "통신오류")
             }
         })
     }

@@ -1,4 +1,4 @@
-package com.example.api_project
+package com.example.api_project.data
 
 data class Movies(
     var img : String,

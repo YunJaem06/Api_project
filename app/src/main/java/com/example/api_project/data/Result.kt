@@ -1,4 +1,4 @@
-package com.example.api_project
+package com.example.api_project.data
 
 data class Result(
     val adult: Boolean,
@@ -18,8 +18,8 @@ data class Result(
 ) {
     fun getPopular(): String {
         val formatter = popularity.toInt()
-        var million = formatter % 100000000
-        var thousand = formatter / 100000000
+        var million = formatter / 10000
+        var thousand = formatter % 100000000
         return "${million}억 ${thousand}만명"
     }
     fun getPosterPercent(): String {
