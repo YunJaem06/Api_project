@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         }.attach()
 
         binding.ivMainMenu.setOnClickListener {
-            binding.drawerLayout.openDrawer(GravityCompat.START)
+            binding.drawerLayout.openDrawer(GravityCompat.END)
         }
 
     }
