@@ -4,7 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/yunja/AndroidStudioProjects/Api_Project/app/src/main/res/drawable/bacground_movie_btn.xml" value="0.2525" />
+        <entry key="..\:/Users/yunja/AndroidStudioProjects/Api_Project/app/src/main/res/drawable/button_login_r20.xml" value="0.2525" />
+        <entry key="..\:/Users/yunja/AndroidStudioProjects/Api_Project/app/src/main/res/drawable/drawable_id_icon.xml" value="0.2525" />
+        <entry key="..\:/Users/yunja/AndroidStudioProjects/Api_Project/app/src/main/res/drawable/drawable_pw_icon.xml" value="0.2525" />
         <entry key="..\:/Users/yunja/AndroidStudioProjects/Api_Project/app/src/main/res/drawable/tab_gradient.xml" value="0.2235" />
+        <entry key="..\:/Users/yunja/AndroidStudioProjects/Api_Project/app/src/main/res/layout/activity_login.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/yunja/AndroidStudioProjects/Api_Project/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/yunja/AndroidStudioProjects/Api_Project/app/src/main/res/layout/activity_splash.xml" value="0.3651041666666667" />
         <entry key="..\:/Users/yunja/AndroidStudioProjects/Api_Project/app/src/main/res/layout/fragment_cgv.xml" value="0.36614583333333334" />

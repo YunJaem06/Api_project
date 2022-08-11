@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_login_back"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/icon_backward_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="로그인"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/iv_login_back"
+        app:layout_constraintStart_toEndOf="@id/iv_login_back"
+        app:layout_constraintTop_toTopOf="@id/iv_login_back" />
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/centered_justification"
+        app:layout_constraintBottom_toBottomOf="@id/iv_login_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_login_back" />
+
+    <ImageView
+        android:id="@+id/iv_login_logo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/icon_cgv_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_login_back" />
+
+    <EditText
+        android:id="@+id/edt_login_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:drawableStart="@drawable/drawable_id_icon"
+        android:drawablePadding="10dp"
+        android:hint="CJ ONE 통합아이디 6~12자"
+        android:inputType="textEmailAddress"
+        android:padding="14dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_login_logo" />
+
+    <EditText
+        android:id="@+id/edt_login_pw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:drawableStart="@drawable/drawable_pw_icon"
+        android:drawablePadding="10dp"
+        android:hint="영문+숫자+특수문자 6~12자"
+        android:inputType="textPassword"
+        android:padding="14dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_login_id" />
+
+    <CheckBox
+        android:id="@+id/cb_login_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:checked="true"
+        android:text="자동로그인"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_login_pw" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button_login_r20"
+        android:text="로그인"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cb_login_save" />
+
+    <LinearLayout
+        android:id="@+id/ll_login_find"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@id/btn_login"
+        app:layout_constraintStart_toStartOf="@id/btn_login"
+        app:layout_constraintTop_toBottomOf="@id/btn_login">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:text="아이디찾기" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/black"
+            android:text="·" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:text="비밀번호찾기" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/black"
+            android:text="·" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:text="회원가입" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_login_noprofile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_login_find"
+        android:src="@drawable/btn_noprofile"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_login_naver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:paddingHorizontal="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_login_noprofile"
+        android:src="@drawable/btn_naver_login"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
