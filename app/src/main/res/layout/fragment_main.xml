@@ -9,21 +9,29 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/vp_home_ad"
+        <com.example.api_project.NestedScrollableHost
+            android:id="@+id/vp_home_ad_host"
             android:layout_width="match_parent"
-            android:layout_height="160dp"
+            android:layout_height="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vp_home_ad"
+                android:layout_width="match_parent"
+                android:layout_height="160dp" />
+
+        </com.example.api_project.NestedScrollableHost>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tb_home_table"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/vp_home_ad"
+            app:layout_constraintTop_toBottomOf="@id/vp_home_ad_host"
             app:tabIndicatorColor="@color/white"
             app:tabSelectedTextColor="@color/black"
             app:tabTextAppearance="@style/tab_home_text"
@@ -47,7 +55,7 @@
             android:layout_marginEnd="15dp"
             android:text="전체보기 >"
             android:textColor="#bcbcbc"
-            android:textSize="15sp"
+            android:textSize="13sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/tb_home_table"
             app:layout_constraintEnd_toEndOf="parent"
@@ -115,7 +123,7 @@
             android:background="#f0f0f0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rv_movie_chart"/>
+            app:layout_constraintTop_toBottomOf="@id/rv_movie_chart" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

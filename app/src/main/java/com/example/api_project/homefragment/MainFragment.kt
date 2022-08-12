@@ -1,6 +1,7 @@
 package com.example.api_project.homefragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,14 +14,6 @@ import com.example.api_project.databinding.FragmentMainBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-
-val images = arrayOf(
-    R.drawable.img_ad1,
-    R.drawable.img_ad2,
-    R.drawable.img_ad3,
-    R.drawable.img_ad4,
-    R.drawable.img_ad5
-)
 
 class MainFragment : Fragment() {
 
@@ -45,7 +38,15 @@ class MainFragment : Fragment() {
         adapter = MovieRvAdapter(requireContext(), movieList)
         binding.rvMovieChart.adapter = adapter
 
-        imgSliderAdapter = ImgSliderAdapter(this, images)
+        val imgUrlList = listOf(
+            "https://user-images.githubusercontent.com/96619472/184324963-f75df303-4d33-46d0-b461-cec55af5f57d.png",
+            "https://user-images.githubusercontent.com/96619472/184325025-7de89156-9756-4e7f-bfc8-d66d6b190fcb.png",
+            "https://user-images.githubusercontent.com/96619472/184336443-d924c8bb-b96a-4379-b5fd-9b9b38973adb.png",
+            "https://user-images.githubusercontent.com/96619472/184336448-aef31da8-6909-4e13-a5f4-57be532dfcf4.png",
+            "https://user-images.githubusercontent.com/96619472/184336450-20f586d6-df90-4902-92ab-e8f6e79b460a.png"
+        )
+
+        imgSliderAdapter = ImgSliderAdapter(imgUrlList)
 
         setUpViewPager()
 

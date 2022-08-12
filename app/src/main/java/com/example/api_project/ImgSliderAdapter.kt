@@ -1,18 +1,20 @@
 package com.example.api_project
 
-import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.api_project.databinding.ItemSliderBinding
-import com.example.api_project.homefragment.MainFragment
 
-class ImgSliderAdapter(private val context: MainFragment, private val imgSlider: Array<Int>) : RecyclerView.Adapter<ImgSliderAdapter.ImgViewHolder>() {
+
+class ImgSliderAdapter(imgUrlList: List<String>) : RecyclerView.Adapter<ImgSliderAdapter.ImgViewHolder>() {
+
+    private val itemlist = imgUrlList
 
     inner class ImgViewHolder(val binding: ItemSliderBinding) : RecyclerView.ViewHolder(binding.root){
-        fun bind(item: Int){
-            Glide.with(context)
+        fun bind(item: String){
+            Glide.with(binding.root.context)
                 .load(item)
                 .into(binding.itemImgSlider)
         }
@@ -25,10 +27,13 @@ class ImgSliderAdapter(private val context: MainFragment, private val imgSlider:
     }
 
     override fun onBindViewHolder(holder: ImgViewHolder, position: Int) {
-        holder.bind(imgSlider[position])
+        holder.bind(itemlist[position])
     }
 
     override fun getItemCount(): Int {
-        return imgSlider.size
+        Log.d("itemlist", "$itemlist")
+        return itemlist.size
+
     }
+
 }
