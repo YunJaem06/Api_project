@@ -28,16 +28,16 @@ class MovieRvAdapter(val context: Context, private val movieList : ArrayList<Mov
 
     inner class MovieRvViewHolder(private val binding: ItemHomeMovieChartBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Movies){
-            binding.tvPosterName.text = itemList[adapterPosition].name
-            val url = "https://image.tmdb.org/t/p/w500" + itemList[adapterPosition].img
+            binding.tvPosterName.text = item.name
+            val url = "https://image.tmdb.org/t/p/w500" + item.img
             Glide.with(context)
                 .load(url)
                 .into(binding.ivMoviePoster)
 
-            binding.tvEggPercent.text = itemList[adapterPosition].egg_percent
-            binding.tvPosterPercent.text = itemList[adapterPosition].moviePercent
-            binding.tvMoviePeopleCount.text = itemList[adapterPosition].see_movie
-            binding.tvPosterRank.text = itemList[adapterPosition].rank.toString()
+            binding.tvEggPercent.text = item.egg_percent
+            binding.tvPosterPercent.text = item.moviePercent
+            binding.tvMoviePeopleCount.text = item.see_movie
+            binding.tvPosterRank.text = item.rank.toString()
         }
     }
 }
