@@ -1,11 +1,10 @@
-package com.example.api_project.fragment
+package com.example.api_project.homefragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.api_project.databinding.FragmentGiftBinding
 import com.example.api_project.databinding.FragmentOrderBinding
 
 class OrderFragment : Fragment() {

@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.api_project.data.Movies
+import com.example.api_project.moviedata.Movies
 import com.example.api_project.databinding.ItemHomeMovieChartBinding
 
 class MovieRvAdapter(val context: Context, private val movieList : ArrayList<Movies>) : RecyclerView.Adapter<MovieRvAdapter.MovieRvViewHolder>() {
@@ -37,6 +37,7 @@ class MovieRvAdapter(val context: Context, private val movieList : ArrayList<Mov
             binding.tvEggPercent.text = itemList[adapterPosition].egg_percent
             binding.tvPosterPercent.text = itemList[adapterPosition].moviePercent
             binding.tvMoviePeopleCount.text = itemList[adapterPosition].see_movie
+            binding.tvPosterRank.text = itemList[adapterPosition].rank.toString()
         }
     }
 }

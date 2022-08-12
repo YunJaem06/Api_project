@@ -1,4 +1,4 @@
-package com.example.api_project.data
+package com.example.api_project.moviedata
 
 data class MovieJson(
     val dates: Dates,

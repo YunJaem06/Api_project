@@ -1,4 +1,4 @@
-package com.example.api_project.fragment
+package com.example.api_project.homefragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.api_project.*
-import com.example.api_project.data.MovieJson
-import com.example.api_project.data.Movies
+import com.example.api_project.moviedata.MovieJson
+import com.example.api_project.moviedata.Movies
 import com.example.api_project.databinding.FragmentMainBinding
 import retrofit2.Call
 import retrofit2.Callback
@@ -47,14 +47,15 @@ class MainFragment : Fragment() {
             override fun onResponse(call: Call<MovieJson>, response: Response<MovieJson>) {
                 if (response.isSuccessful) {
                     val result = response.body() as MovieJson
-                    for (i in 0..5) {
+                    for (i in 0..9) {
                         movieList.add(
                             Movies(
                                 result.results[i].poster_path,
                                 result.results[i].title,
                                 result.results[i].vote_average.toString(),
                                 result.results[i].getPosterPercent(),
-                                result.results[i].getPopular()
+                                result.results[i].getPopular(),
+                                result.results[i].genre_ids.size
                                 )
                         )
                     }

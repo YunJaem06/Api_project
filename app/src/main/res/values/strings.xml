@@ -2,4 +2,7 @@
     <string name="app_name">Api_Project</string>
 
     <string name="movie_key">a2b2c4bb310ebd363e399eb3d6dc5f7a</string>
+
+    <string name="kakao_key">b08e25c97348c04ff8569cf87ffa880a</string>
+
 </resources>

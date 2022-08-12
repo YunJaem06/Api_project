@@ -1,4 +1,4 @@
-package com.example.api_project.data
+package com.example.api_project.moviedata
 
 data class Result(
     val adult: Boolean,
@@ -18,9 +18,7 @@ data class Result(
 ) {
     fun getPopular(): String {
         val formatter = popularity.toInt()
-        var million = formatter / 10000
-        var thousand = formatter % 100000000
-        return "${million}억 ${thousand}만명"
+        return "${formatter}만명"
     }
     fun getPosterPercent(): String {
         val percent = vote_average.toInt()

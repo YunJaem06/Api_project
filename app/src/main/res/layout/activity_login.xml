@@ -168,15 +168,25 @@
         app:layout_constraintTop_toBottomOf="@id/ll_login_find"
         android:src="@drawable/btn_noprofile"/>
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/iv_login_naver"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/iv_kakao_login"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:paddingHorizontal="25dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_login_noprofile"
-        android:src="@drawable/btn_naver_login"/>
+        android:src="@drawable/kakao_login"
+        app:layout_constraintStart_toStartOf="@id/iv_login_noprofile"
+        app:layout_constraintEnd_toEndOf="@id/iv_login_noprofile"
+        app:layout_constraintTop_toBottomOf="@id/iv_login_noprofile"/>
+
+    <ImageView
+        android:id="@+id/iv_kakao_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/kakao_logout"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/iv_kakao_login"
+        app:layout_constraintEnd_toEndOf="@id/iv_kakao_login"
+        app:layout_constraintTop_toBottomOf="@id/iv_kakao_login"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
