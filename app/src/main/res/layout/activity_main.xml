@@ -96,5 +96,6 @@
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-    <include layout="@layout/item_side_menu"/>
+    <include layout="@layout/item_side_menu"
+        android:id="@+id/main_item_slid"/>
 </androidx.drawerlayout.widget.DrawerLayout>

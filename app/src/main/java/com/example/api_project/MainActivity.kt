@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         binding.ivMainMenu.setOnClickListener {
             binding.drawerLayout.openDrawer(GravityCompat.END)
         }
-        binding.ivMainTicket.setOnClickListener {
+        binding.mainItemSlid.tvLoginBtn.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
