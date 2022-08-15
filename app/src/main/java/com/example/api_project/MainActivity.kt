@@ -9,9 +9,11 @@ import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.bumptech.glide.Glide
 import com.example.api_project.databinding.ActivityMainBinding
 import com.google.android.material.tabs.TabLayoutMediator
 import com.kakao.sdk.common.util.Utility
+import com.kakao.sdk.user.UserApiClient
 
 class MainActivity : AppCompatActivity() {
 
@@ -38,6 +40,14 @@ class MainActivity : AppCompatActivity() {
         binding.mainItemSlid.tvLoginBtn.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
+        }
+        UserApiClient.instance.me { user, error ->
+            binding.mainItemSlid.tvLoginBtn.text =  "${user?.kakaoAccount?.profile?.nickname}"
+            if (user != null) {
+                Glide.with(this)
+                    .load(user.kakaoAccount?.profile?.profileImageUrl)
+                    .into(binding.mainItemSlid.ivSideLoginProfile)
+            }
         }
     }
 }
