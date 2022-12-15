@@ -1,7 +1,6 @@
-package com.example.api_project
+package com.example.api_project.utils
 
 import android.animation.ObjectAnimator
-import android.animation.ValueAnimator
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -9,6 +8,7 @@ import android.os.Looper
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.api_project.databinding.ActivitySplashBinding
+import com.example.api_project.ui.user.MainActivity
 
 class SplashActivity : AppCompatActivity() {
 

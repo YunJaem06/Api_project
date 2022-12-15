@@ -1,4 +1,4 @@
-package com.example.api_project
+package com.example.api_project.utils.adapters
 
 import android.util.Log
 import android.view.LayoutInflater

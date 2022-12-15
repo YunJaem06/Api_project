@@ -1,16 +1,19 @@
-package com.example.api_project.homefragment
+package com.example.api_project.ui.home
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.api_project.*
-import com.example.api_project.moviedata.MovieJson
-import com.example.api_project.moviedata.Movies
+import com.example.api_project.models.MovieJson
+import com.example.api_project.models.Movies
 import com.example.api_project.databinding.FragmentMainBinding
+import com.example.api_project.retrofit.RetrofitClient
+import com.example.api_project.retrofit.RetrofitMovieAPI
+import com.example.api_project.utils.adapters.ImgSliderAdapter
+import com.example.api_project.utils.adapters.MovieRvAdapter
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

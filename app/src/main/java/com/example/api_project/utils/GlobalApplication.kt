@@ -1,6 +1,7 @@
-package com.example.api_project
+package com.example.api_project.utils
 
 import android.app.Application
+import com.example.api_project.R
 import com.kakao.sdk.common.KakaoSdk
 
 class GlobalApplication: Application() {

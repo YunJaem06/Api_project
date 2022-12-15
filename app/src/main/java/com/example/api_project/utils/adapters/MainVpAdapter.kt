@@ -1,8 +1,10 @@
-package com.example.api_project
+package com.example.api_project.utils.adapters
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.api_project.homefragment.*
+import com.example.api_project.ui.*
+import com.example.api_project.ui.home.MainFragment
+import com.example.api_project.ui.user.MainActivity
 
 class MainVpAdapter(fragment: MainActivity) : FragmentStateAdapter(fragment){
     override fun getItemCount(): Int = 6

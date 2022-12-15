@@ -1,4 +1,4 @@
-package com.example.api_project
+package com.example.api_project.ui.user
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,10 +7,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.api_project.databinding.ActivityLoginBinding
 import com.kakao.sdk.auth.model.OAuthToken
-import com.kakao.sdk.common.KakaoSdk
 import com.kakao.sdk.common.model.ClientError
 import com.kakao.sdk.common.model.ClientErrorCause
-import com.kakao.sdk.common.util.Utility
 import com.kakao.sdk.user.UserApiClient
 
 class LoginActivity : AppCompatActivity() {

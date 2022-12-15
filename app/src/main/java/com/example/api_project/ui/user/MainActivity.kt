@@ -1,18 +1,13 @@
-package com.example.api_project
+package com.example.api_project.ui.user
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.MenuItem
-import android.view.View
-import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
-import androidx.drawerlayout.widget.DrawerLayout
 import com.bumptech.glide.Glide
+import com.example.api_project.utils.adapters.MainVpAdapter
 import com.example.api_project.databinding.ActivityMainBinding
 import com.google.android.material.tabs.TabLayoutMediator
-import com.kakao.sdk.common.util.Utility
 import com.kakao.sdk.user.UserApiClient
 
 class MainActivity : AppCompatActivity() {

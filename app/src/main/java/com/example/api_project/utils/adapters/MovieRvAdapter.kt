@@ -1,11 +1,11 @@
-package com.example.api_project
+package com.example.api_project.utils.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.api_project.moviedata.Movies
+import com.example.api_project.models.Movies
 import com.example.api_project.databinding.ItemHomeMovieChartBinding
 
 class MovieRvAdapter(val context: Context, private val movieList : ArrayList<Movies>) : RecyclerView.Adapter<MovieRvAdapter.MovieRvViewHolder>() {
