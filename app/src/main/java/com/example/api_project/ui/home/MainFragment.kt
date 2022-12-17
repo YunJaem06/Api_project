@@ -56,6 +56,7 @@ class MainFragment : Fragment() {
         getMovieData(getString(R.string.movie_key), "ko-KR", 1, "KR")
     }
 
+    // 홈화면 광고
     private fun setUpViewPager(){
         binding.vpHomeAd.adapter = imgSliderAdapter
 
@@ -63,6 +64,7 @@ class MainFragment : Fragment() {
 
     }
 
+    // api 연결
     private fun getMovieData(api_key: String, language: String, page: Int, region: String) {
 
         val movieApi = RetrofitClient.mainRetrofit.create(RetrofitMovieAPI::class.java)

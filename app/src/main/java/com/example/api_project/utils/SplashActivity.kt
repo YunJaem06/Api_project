@@ -20,6 +20,7 @@ class SplashActivity : AppCompatActivity() {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // 애니메이션 오른쪽으로 이동
         ObjectAnimator.ofFloat(binding.ivSplash, View.TRANSLATION_X, -540f).apply {
             duration = 1500L
             repeatCount = ObjectAnimator.INFINITE
